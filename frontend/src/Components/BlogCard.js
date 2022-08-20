@@ -1,22 +1,25 @@
 import React from "react";
 import styles from './BlogCard.module.css';
+import background from '../assets/background.jpg'
+import { Link } from "react-router-dom";
+
+//Card Template for blogs shown at home screen
 
 const BlogCard = (props) => {
   return (
     <React.Fragment>
-      <h1>Hover Cards</h1>
       <div className={styles.container}>
         <div className={styles.hoverbox}>
           <img
             className={styles.hoverbox__image}
-            src="https://picsum.photos/400/400"
+            src={background}
             alt="Test Img"
           ></img>
           <h3>{props.title}</h3>
           <p>
             {props.description}
           </p>
-          <link href="">More infos</link>
+          <Link to={`/${props.title}`}>Read More</Link>
         </div>
       </div>
     </React.Fragment>
