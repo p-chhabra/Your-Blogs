@@ -1,0 +1,111 @@
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .hoverbox {
+    position: relative;
+    background: rgba(48, 52, 59, 0.75);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 0.5s ease-in;
+  }
+  .hoverbox:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0.25rem;
+    background: var(--clr-primary);
+    transition: var(--transition);
+  }
+  .hoverbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: var(--transition);
+    filter: blur(2px);
+  }
+  .hoverbox h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .hoverbox p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+  }
+  .hoverbox a {
+    position: relative;
+    color: #fff;
+    text-decoration: unset;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: 0.5s ease-in;
+  }
+  .hoverbox a:after {
+    content: ">";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    border: 2px solid #fff5;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: var(--transition);
+  }
+  .hoverbox a:before {
+    content: "";
+    position: absolute;
+    width: 0rem;
+    height: 0.125rem;
+    background: #fff;
+    right: 0.75rem;
+    top: calc(50% - 0.025rem);
+    transition: var(--transition);
+  }
+  .hoverbox:hover {
+    box-shadow: 0px 16px 24px rgba(0, 15, 0, 0.1);
+  }
+  .hoverbox:hover:after {
+    width: 100%;
+  }
+  .hoverbox:hover a:after {
+    border-color: transparent;
+    margin-left: 2rem;
+  }
+  .hoverbox:hover a:before {
+    width: 1.5rem;
+    background: var(--clr-primary);
+  }
+  .hoverbox:hover a {
+    color: var(--clr-primary);
+  }
+  .hoverbox:hover a:hover {
+    color: var(--clr-primary-hover);
+  }
+  .hoverbox:hover a:hover:before {
+    background: var(--clr-primary-hover);
+  }
+  .hoverbox:hover img {
+    transform: scale(1.2) rotate(-5deg);
+    filter: blur(8px);
+  }
