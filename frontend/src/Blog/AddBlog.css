@@ -1,0 +1,29 @@
+.write {
+    padding-top: 50px;
+  }
+
+  .writeForm {
+    position: relative;
+  }
+  
+  .writeFormGroup {
+    margin-left: 150px;
+  }
+  
+  .writeInput {
+    font-size: 30px;
+    padding: 20px;
+    border-bottom: 5px;
+  }
+  
+  .writeInput::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+  }
+  
+  .writeInput:focus {
+    outline-style: none;
+  }
+
+  
+  

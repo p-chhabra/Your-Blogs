@@ -1,26 +1,29 @@
-import React from 'react'
-import BlogCard from '../Components/BlogCard';
-import AnimatedPage from '../Shared/AnimatedPage';
+import React from "react";
+import Button from "../Components/Button";
+import { Link } from "react-router-dom";
+import AnimatedPage from "../Shared/AnimatedPage";
+import homeImg from '../assets/home.png'
 
-const BlogPost = () => {
+//Blog Post Page
 
-  const DUMMY_BLOG = [{
-    title: "ABC", description: "asdafbdsahfbjsd"
-  }, {
-    title: "XNY", description: "asfnkksdbfkhsdbggsdu"
-  },{
-    title: "POR", description: "dkjasbhgvusgtasdyisdi"
-  }];
-  
-  const allBlogs = DUMMY_BLOG.map((blog)=>{
-    return <BlogCard title={blog.title} description={blog.description}></BlogCard>
-  })
-
+const BlogPost = (props) => {
   return (
-    <AnimatedPage>
-    {allBlogs}
-    </AnimatedPage>
-  )
-}
+    <React.Fragment>
+      <AnimatedPage>
+        <div>
+          <Link to="/">
+            <Button>{`Home`}</Button>
+          </Link>
+        </div>
+        <div className="flex flex-col justify-center items-center p-20 pt-5">
+          <p className="text-4xl font-bold mb-10">Title</p>
+          <p>
+            jhdgfsukdygfffffffsdyugfksduygfsdlyfigdslyfgdsilfgsufgsdliufdgfiadglfYSGDFGSDYGFLSDFliu
+          </p>
+        </div>
+      </AnimatedPage>
+    </React.Fragment>
+  );
+};
 
-export default BlogPost
+export default BlogPost;

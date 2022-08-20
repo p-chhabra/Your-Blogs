@@ -1,23 +1,40 @@
   
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-  }
+ :root {
+	--clr-primary: hsl(25, 70%, 60%);
+	--clr-primary-hover: hsl(25, 70%, 60%);
+	--transition: 0.5s ease;
+}
   
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
+    position: relative;
+    width: calc(25% - 60px);
+    margin: 50px 30px 40px 30px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    float: left;
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      margin: 30px 40px;
+      width: calc(33% - 80px);
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      margin: 30px 40px;
+      width: calc(100% - 80px);
+    }
   }
   
   .hoverbox {
     position: relative;
     background: rgba(48, 52, 59, 0.75);
     padding: 32px;
+    height: 100%;
     overflow: hidden;
     border-radius: 8px;
     transition: 0.5s ease-in;
@@ -49,7 +66,7 @@
   }
   .hoverbox p {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1rem;
+    margin-bottom: 7rem;
   }
   .hoverbox a {
     position: relative;
