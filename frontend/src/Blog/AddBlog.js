@@ -53,13 +53,16 @@ export default function AddBlog() {
 
     if (formIsValid) {
       try {
-        const formData = new FormData();
-        formData.append("title", title);
-        formData.append("description", description);
-
         const response = await fetch("http://localhost:8000/api/addBlog", {
           method: "POST",
-          body: formData,
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: title,
+            description: description,
+          }),
         });
 
         const responseData = await response.json();
@@ -69,8 +72,7 @@ export default function AddBlog() {
         }
 
         console.log("Success");
-        console.log(enteredText);
-        let form = document.getElementsByClassName("writeForm")[0];
+        let form = document.getElementsByClassName("addBlogForm")[0];
         form.reset();
         Navigate("/");
         alert("Blog created successfully!");
@@ -83,7 +85,7 @@ export default function AddBlog() {
   return (
     <AnimatedPage>
       <div>
-        <form onSubmit={onPublishHandler}>
+        <form className="addBlogForm" onSubmit={onPublishHandler}>
           <input
             ref={titleInputRef}
             onChange={(e) => {
