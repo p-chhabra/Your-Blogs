@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+//3rd party library for animations
+
 const animations = {
   initial: { opacity: 0, x: 100 },
   animate: { opacity: 1, x: 0 },
