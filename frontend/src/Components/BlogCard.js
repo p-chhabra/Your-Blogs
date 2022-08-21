@@ -16,7 +16,7 @@ const BlogCard = (props) => {
             alt="Test Img"
           ></img>
           <h3>{props.title}</h3>
-          <div className="text-gray-300" dangerouslySetInnerHTML={{__html: props.description}}></div>
+          <div className="text-gray-300 overflow-hidden mb-3" dangerouslySetInnerHTML={{__html: props.description}}></div>
           <div className="flex flex-col items-end">
           <Link to={`/${props.id}`}>Read More</Link>
           </div>
