@@ -9,17 +9,17 @@ const BlogCard = (props) => {
   return (
     <React.Fragment>
       <div className={styles.container}>
-        <div className={styles.hoverbox}>
+        <div className={styles.hoverbox + ` flex flex-col justify-between items-center`}>
           <img
             className={styles.hoverbox__image}
             src={background}
             alt="Test Img"
           ></img>
           <h3>{props.title}</h3>
-          <p>
-            {props.description}
-          </p>
-          <Link to={`/${props.title}`}>Read More</Link>
+          <div className="text-gray-300" dangerouslySetInnerHTML={{__html: props.description}}></div>
+          <div className="flex flex-col items-end">
+          <Link to={`/${props.id}`}>Read More</Link>
+          </div>
         </div>
       </div>
     </React.Fragment>

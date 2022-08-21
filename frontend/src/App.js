@@ -12,7 +12,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/:blog' element={<BlogPost/>}/>
+          <Route path='/:blogID' element={<BlogPost/>}/>
           <Route path='/addBlog' element={<AddBlog/>}/>
         </Routes>
       </AnimatePresence>
