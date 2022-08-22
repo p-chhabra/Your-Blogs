@@ -21,8 +21,8 @@ const Home = () => {
           if(!response.ok){
             throw new Error(responseData.message);
           }
-
-          setBlogs(responseData.blogs);
+          let reverseBlogs = responseData.blogs.reverse();
+          setBlogs(reverseBlogs);
 
         }catch(err){
           console.log(err.message);
