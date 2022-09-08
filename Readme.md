@@ -13,4 +13,4 @@
 ## How to tun the app locally
 
 - Clone the repository and run npm start in both the frontend and the backend folders.
-- MongoDB database access is given to all PCs. This should start the development serve.
+- MongoDB database access is given to all PCs. This should start the development server.
