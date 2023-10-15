@@ -1,4 +1,4 @@
-# EQAIM BLOGS
+# YOUR BLOGS
 
 ## Frontend
 
